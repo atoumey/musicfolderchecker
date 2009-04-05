@@ -1,0 +1,21 @@
+﻿<Window x:Class="MusicFolderChecker.Window1"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    Title="Music Folder Checker" Height="300" Width="600"
+        Loaded="Window_Loaded">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <ListBox Grid.Row="0" Grid.Column="0" Name="tree" SelectionChanged="tree_SelectionChanged" SelectionMode="Extended">
+        </ListBox>
+        <Button Grid.Row="1" Grid.Column="0" Content="Choose folder..." Click="Button_Click" Name="chooseFolderButton"/>
+        <ListBox Grid.Row="0" Grid.Column="1" Name="contents"/>
+        <Button Grid.Row="1" Grid.Column="1" Content="DELETE SELECTED FOLDER(S)" Click="Button_Click_1"/>
+    </Grid>
+</Window>
